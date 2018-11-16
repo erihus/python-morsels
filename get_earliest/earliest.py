@@ -1,4 +1,4 @@
-def get_earliest(date1, date2):
+def my_get_earliest(date1, date2):
 	date1List = date1.split('/')
 	date2List = date2.split('/')
 
@@ -18,7 +18,6 @@ def get_earliest(date1, date2):
 		return date1 if yearTest == date1List else date2
 	else:
 		monthTest = testValue(date1List, date2List, 0)
-
 		if(monthTest):
 			return date1 if monthTest == date1List else date2
 		else:
@@ -27,4 +26,14 @@ def get_earliest(date1, date2):
 				return date1 if dayTest == date1List else date2
 			else:
 				return 'Could not compute'
+
+
+def solution_get_earliest(date1, date2):
+  """Return earliest of two MM/DD/YYYY-formatted date strings."""
+  (m1, d1, y1) = date1.split('/')
+  (m2, d2, y2) = date2.split('/')
+  return date1 if (y1, m1, d1) < (y2, m2, d2) else date2
+
+
+
 
