@@ -1,4 +1,4 @@
-##Problem
+## Problem
 
 Write a function that accepts a string and returns a mapping (a dictionary or dictionary-like structure) that has words as the keys and the number of times each word was seen as the values.
 
